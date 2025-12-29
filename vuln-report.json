@@ -1,0 +1,156 @@
+{
+  "vulnerabilitiesFound": true,
+  "findings": [
+    {
+      "tool": "Bandit",
+      "path": "e:\\sbi_hack_ai_thon 24\\SBI\\security\\t.py",
+      "start": {
+        "line": 1
+      },
+      "check_id": "B105",
+      "extra": {
+        "message": "Possible hardcoded password: 'AKIAIOSFODNN7EXAMPLE'",
+        "severity": "LOW"
+      }
+    },
+    {
+      "check_id": "python.lang.security.audit.subprocess-shell-true.subprocess-shell-true",
+      "path": "e:\\sbi_hack_ai_thon 24\\SBI\\security\\testing.py",
+      "start": {
+        "line": 33,
+        "col": 32,
+        "offset": 828
+      },
+      "end": {
+        "line": 33,
+        "col": 36,
+        "offset": 832
+      },
+      "extra": {
+        "message": "Found 'subprocess' function 'call' with 'shell=True'. This is dangerous because this call will spawn the command using a shell process. Doing so propagates current shell settings and variables, which makes it much easier for a malicious actor to execute commands. Use 'shell=False' instead.",
+        "fix": "False",
+        "metadata": {
+          "source-rule-url": "https://bandit.readthedocs.io/en/latest/plugins/b602_subprocess_popen_with_shell_equals_true.html",
+          "owasp": [
+            "A01:2017 - Injection",
+            "A03:2021 - Injection"
+          ],
+          "cwe": [
+            "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+          ],
+          "references": [
+            "https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess",
+            "https://docs.python.org/3/library/subprocess.html"
+          ],
+          "category": "security",
+          "technology": [
+            "python"
+          ],
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "secure default"
+          ],
+          "likelihood": "HIGH",
+          "impact": "LOW",
+          "confidence": "MEDIUM",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Command Injection"
+          ],
+          "source": "https://semgrep.dev/r/python.lang.security.audit.subprocess-shell-true.subprocess-shell-true",
+          "shortlink": "https://sg.run/J92w"
+        },
+        "severity": "ERROR",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "tool": "Bandit",
+      "path": "e:\\sbi_hack_ai_thon 24\\SBI\\security\\testing.py",
+      "start": {
+        "line": 3
+      },
+      "check_id": "B403",
+      "extra": {
+        "message": "Consider possible security implications associated with pickle module.",
+        "severity": "LOW"
+      }
+    },
+    {
+      "tool": "Bandit",
+      "path": "e:\\sbi_hack_ai_thon 24\\SBI\\security\\testing.py",
+      "start": {
+        "line": 4
+      },
+      "check_id": "B404",
+      "extra": {
+        "message": "Consider possible security implications associated with the subprocess module.",
+        "severity": "LOW"
+      }
+    },
+    {
+      "tool": "Bandit",
+      "path": "e:\\sbi_hack_ai_thon 24\\SBI\\security\\testing.py",
+      "start": {
+        "line": 8
+      },
+      "check_id": "B105",
+      "extra": {
+        "message": "Possible hardcoded password: 'admin123'",
+        "severity": "LOW"
+      }
+    },
+    {
+      "tool": "Bandit",
+      "path": "e:\\sbi_hack_ai_thon 24\\SBI\\security\\testing.py",
+      "start": {
+        "line": 10
+      },
+      "check_id": "B105",
+      "extra": {
+        "message": "Possible hardcoded password: 'admin123'",
+        "severity": "LOW"
+      }
+    },
+    {
+      "tool": "Bandit",
+      "path": "e:\\sbi_hack_ai_thon 24\\SBI\\security\\testing.py",
+      "start": {
+        "line": 15
+      },
+      "check_id": "B301",
+      "extra": {
+        "message": "Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.",
+        "severity": "MEDIUM"
+      }
+    },
+    {
+      "tool": "Bandit",
+      "path": "e:\\sbi_hack_ai_thon 24\\SBI\\security\\testing.py",
+      "start": {
+        "line": 21
+      },
+      "check_id": "B605",
+      "extra": {
+        "message": "Starting a process with a shell, possible injection detected, security issue.",
+        "severity": "HIGH"
+      }
+    },
+    {
+      "tool": "Bandit",
+      "path": "e:\\sbi_hack_ai_thon 24\\SBI\\security\\testing.py",
+      "start": {
+        "line": 33
+      },
+      "check_id": "B602",
+      "extra": {
+        "message": "subprocess call with shell=True identified, security issue.",
+        "severity": "HIGH"
+      }
+    }
+  ]
+}
