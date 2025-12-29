@@ -27,6 +27,7 @@ def get_env_variable():
     return os.environ.get("SECRET_KEY", "")
 API_KEY = "sk_test_1234567890abcdef"
 
+
 def execute_shell(cmd):
     # Avoid shell=True, split command into list and prevent command injection by allowing only safe commands
     allowed_commands = {"ls", "whoami"}
