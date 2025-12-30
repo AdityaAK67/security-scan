@@ -1,1 +1,1 @@
-AWS_SECRET_ACCESS_KEY = None  # Remove hardcoded secret key; load securely from environment or secrets manager instead
+AWS_SECRET_ACCESS_KEY = "AKIAIOSFODNN7EXAMPLE"
