@@ -1,134 +1,33 @@
 {
   "errors": [],
-  "generated_at": "2025-12-29T17:55:33Z",
+  "generated_at": "2025-12-30T02:15:41Z",
   "metrics": {
     "_totals": {
-      "CONFIDENCE.HIGH": 5,
+      "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
       "CONFIDENCE.UNDEFINED": 0,
       "SEVERITY.HIGH": 0,
-      "SEVERITY.LOW": 4,
-      "SEVERITY.MEDIUM": 1,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 46,
+      "loc": 1,
       "nosec": 0,
       "skipped_tests": 0
     },
-    "e:\\sbi_hack_ai_thon 24\\SBI\\security\\test.py": {
-      "CONFIDENCE.HIGH": 5,
+    "e:\\sbi_hack_ai_thon 24\\SBI\\security\\t.py": {
+      "CONFIDENCE.HIGH": 0,
       "CONFIDENCE.LOW": 0,
       "CONFIDENCE.MEDIUM": 0,
       "CONFIDENCE.UNDEFINED": 0,
       "SEVERITY.HIGH": 0,
-      "SEVERITY.LOW": 4,
-      "SEVERITY.MEDIUM": 1,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 46,
+      "loc": 1,
       "nosec": 0,
       "skipped_tests": 0
     }
   },
-  "results": [
-    {
-      "code": "1 import os\n2 import pickle\n3 import subprocess\n",
-      "col_offset": 0,
-      "end_col_offset": 13,
-      "filename": "e:\\sbi_hack_ai_thon 24\\SBI\\security\\test.py",
-      "issue_confidence": "HIGH",
-      "issue_cwe": {
-        "id": 502,
-        "link": "https://cwe.mitre.org/data/definitions/502.html"
-      },
-      "issue_severity": "LOW",
-      "issue_text": "Consider possible security implications associated with pickle module.",
-      "line_number": 2,
-      "line_range": [
-        2
-      ],
-      "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b403-import-pickle",
-      "test_id": "B403",
-      "test_name": "blacklist"
-    },
-    {
-      "code": "2 import pickle\n3 import subprocess\n4 \n",
-      "col_offset": 0,
-      "end_col_offset": 17,
-      "filename": "e:\\sbi_hack_ai_thon 24\\SBI\\security\\test.py",
-      "issue_confidence": "HIGH",
-      "issue_cwe": {
-        "id": 78,
-        "link": "https://cwe.mitre.org/data/definitions/78.html"
-      },
-      "issue_severity": "LOW",
-      "issue_text": "Consider possible security implications associated with the subprocess module.",
-      "line_number": 3,
-      "line_range": [
-        3
-      ],
-      "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_imports.html#b404-import-subprocess",
-      "test_id": "B404",
-      "test_name": "blacklist"
-    },
-    {
-      "code": "10     with open(file_path, \"rb\") as f:\n11         data = pickle.load(f)  # Note: Ideally replace pickle with safer format like JSON\n12     return data\n",
-      "col_offset": 15,
-      "end_col_offset": 29,
-      "filename": "e:\\sbi_hack_ai_thon 24\\SBI\\security\\test.py",
-      "issue_confidence": "HIGH",
-      "issue_cwe": {
-        "id": 502,
-        "link": "https://cwe.mitre.org/data/definitions/502.html"
-      },
-      "issue_severity": "MEDIUM",
-      "issue_text": "Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.",
-      "line_number": 11,
-      "line_range": [
-        11
-      ],
-      "more_info": "https://bandit.readthedocs.io/en/1.9.2/blacklists/blacklist_calls.html#b301-pickle",
-      "test_id": "B301",
-      "test_name": "blacklist"
-    },
-    {
-      "code": "16     command = [\"ping\", user_input]\n17     subprocess.run(command, check=True)\n18 \n",
-      "col_offset": 4,
-      "end_col_offset": 39,
-      "filename": "e:\\sbi_hack_ai_thon 24\\SBI\\security\\test.py",
-      "issue_confidence": "HIGH",
-      "issue_cwe": {
-        "id": 78,
-        "link": "https://cwe.mitre.org/data/definitions/78.html"
-      },
-      "issue_severity": "LOW",
-      "issue_text": "subprocess call - check for execution of untrusted input.",
-      "line_number": 17,
-      "line_range": [
-        17
-      ],
-      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
-      "test_id": "B603",
-      "test_name": "subprocess_without_shell_equals_true"
-    },
-    {
-      "code": "33     if all(part in allowed_commands for part in parts):\n34         subprocess.call(parts)\n35     else:\n",
-      "col_offset": 8,
-      "end_col_offset": 30,
-      "filename": "e:\\sbi_hack_ai_thon 24\\SBI\\security\\test.py",
-      "issue_confidence": "HIGH",
-      "issue_cwe": {
-        "id": 78,
-        "link": "https://cwe.mitre.org/data/definitions/78.html"
-      },
-      "issue_severity": "LOW",
-      "issue_text": "subprocess call - check for execution of untrusted input.",
-      "line_number": 34,
-      "line_range": [
-        34
-      ],
-      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b603_subprocess_without_shell_equals_true.html",
-      "test_id": "B603",
-      "test_name": "subprocess_without_shell_equals_true"
-    }
-  ]
+  "results": []
 }
