@@ -1,37 +1,37 @@
 {
   "errors": [],
-  "generated_at": "2025-12-30T02:20:00Z",
+  "generated_at": "2025-12-30T02:27:38Z",
   "metrics": {
     "_totals": {
-      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.HIGH": 1,
       "CONFIDENCE.LOW": 1,
       "CONFIDENCE.MEDIUM": 1,
       "CONFIDENCE.UNDEFINED": 0,
       "SEVERITY.HIGH": 0,
-      "SEVERITY.LOW": 1,
+      "SEVERITY.LOW": 2,
       "SEVERITY.MEDIUM": 1,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 2,
+      "loc": 6,
       "nosec": 0,
       "skipped_tests": 0
     },
     "e:\\sbi_hack_ai_thon 24\\SBI\\security\\t.py": {
-      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.HIGH": 1,
       "CONFIDENCE.LOW": 1,
       "CONFIDENCE.MEDIUM": 1,
       "CONFIDENCE.UNDEFINED": 0,
       "SEVERITY.HIGH": 0,
-      "SEVERITY.LOW": 1,
+      "SEVERITY.LOW": 2,
       "SEVERITY.MEDIUM": 1,
       "SEVERITY.UNDEFINED": 0,
-      "loc": 2,
+      "loc": 6,
       "nosec": 0,
       "skipped_tests": 0
     }
   },
   "results": [
     {
-      "code": "1 AWS_SECRET_ACCESS_KEY = \"AKIAIOSFODNN7EXAMPLE\"\n2 query = \"SELECT * FROM users WHERE name = '\" + user_input + \"'\"\n",
+      "code": "1 AWS_SECRET_ACCESS_KEY = \"AKIAIOSFODNN7EXAMPLE\"\n2 query = \"SELECT * FROM users WHERE name = '\" + user_input + \"'\"\n3 try:\n",
       "col_offset": 24,
       "end_col_offset": 46,
       "filename": "e:\\sbi_hack_ai_thon 24\\SBI\\security\\t.py",
@@ -51,7 +51,7 @@
       "test_name": "hardcoded_password_string"
     },
     {
-      "code": "1 AWS_SECRET_ACCESS_KEY = \"AKIAIOSFODNN7EXAMPLE\"\n2 query = \"SELECT * FROM users WHERE name = '\" + user_input + \"'\"\n",
+      "code": "1 AWS_SECRET_ACCESS_KEY = \"AKIAIOSFODNN7EXAMPLE\"\n2 query = \"SELECT * FROM users WHERE name = '\" + user_input + \"'\"\n3 try:\n",
       "col_offset": 8,
       "end_col_offset": 44,
       "filename": "e:\\sbi_hack_ai_thon 24\\SBI\\security\\t.py",
@@ -69,6 +69,27 @@
       "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b608_hardcoded_sql_expressions.html",
       "test_id": "B608",
       "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "4     risky_code()\n5 except:\n6     pass\n",
+      "col_offset": 0,
+      "end_col_offset": 8,
+      "filename": "e:\\sbi_hack_ai_thon 24\\SBI\\security\\t.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Try, Except, Pass detected.",
+      "line_number": 5,
+      "line_range": [
+        5,
+        6
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.2/plugins/b110_try_except_pass.html",
+      "test_id": "B110",
+      "test_name": "try_except_pass"
     }
   ]
 }
