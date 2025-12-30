@@ -26,6 +26,7 @@ def get_env_variable():
     # Use get with default to avoid KeyError
     return os.environ.get("SECRET_KEY", "")
 API_KEY = "sk_test_1234567890abcdef"
+API_KEY = "sk_live_newsecret"
 
 def execute_shell(cmd):
     # Avoid shell=True, split command into list and prevent command injection by allowing only safe commands
